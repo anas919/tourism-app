@@ -1,0 +1,149 @@
+-- Merging decision tree log ---
+provider#org.apache.cordova.camera.FileProvider
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:12:9-14:20
+	android:grantUriPermissions
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:12:92-126
+	android:authorities
+		INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:12:19-66
+	android:exported
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:12:67-91
+	android:name
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:12:127-180
+manifest
+ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+MERGED from [:CordovaLib] C:\Users\anas\inventory\platforms\android\CordovaLib\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:1-27:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\17be17a5260ffff85a7c272e048659d9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\ebad095c67b189b608f89b9a82d13711\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\8355b57cd71cd02946729db8cf5b76d6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\e108977bddee1c91f08df6716410cb2f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\a8bbb03b42bed569e3d37f14b659abd4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\71c5d636cdd111426c3cf2e6b04cf95b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b071695958c8eaf649d98d2b18e6e8ec\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2d79b011e05dedca7886ca66235f5e5a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\d699b15997e473b8a6fa63e57e2e8a90\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f5567286e8667f54e252a98f8f4fc009\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+	package
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:98-130
+		INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:70-97
+		INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+	android:hardwareAccelerated
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:11-45
+	xmlns:android
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:131-189
+	android:versionCode
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:2:46-69
+		INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+supports-screens
+ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:3:5-191
+	android:largeScreens
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:3:49-76
+	android:smallScreens
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:3:132-159
+	android:normalScreens
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:3:77-105
+	android:xlargeScreens
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:3:160-188
+	android:resizeable
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:3:106-131
+	android:anyDensity
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:3:23-48
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
+application
+ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:5:5-15:19
+	android:supportsRtl
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:5:182-208
+	android:label
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:5:88-120
+	android:hardwareAccelerated
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:5:18-52
+	android:icon
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:5:53-87
+	android:networkSecurityConfig
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:5:121-181
+activity#com.inventary.tracking.MainActivity
+ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:6:9-11:20
+	android:label
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:6:136-173
+	android:launchMode
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:6:174-204
+	android:windowSoftInputMode
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:6:296-338
+	android:configChanges
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:6:19-135
+	android:theme
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:6:233-295
+	android:name
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:6:205-232
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:7:13-10:29
+	android:label
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:7:28-65
+action#android.intent.action.MAIN
+ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:8:17-69
+	android:name
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:8:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:9:17-77
+	android:name
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:9:27-74
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:16:22-78
+uses-sdk
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+MERGED from [:CordovaLib] C:\Users\anas\inventory\platforms\android\CordovaLib\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:5-44
+MERGED from [:CordovaLib] C:\Users\anas\inventory\platforms\android\CordovaLib\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\17be17a5260ffff85a7c272e048659d9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\17be17a5260ffff85a7c272e048659d9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\ebad095c67b189b608f89b9a82d13711\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\ebad095c67b189b608f89b9a82d13711\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\8355b57cd71cd02946729db8cf5b76d6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\8355b57cd71cd02946729db8cf5b76d6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\e108977bddee1c91f08df6716410cb2f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\e108977bddee1c91f08df6716410cb2f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\a8bbb03b42bed569e3d37f14b659abd4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\a8bbb03b42bed569e3d37f14b659abd4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\71c5d636cdd111426c3cf2e6b04cf95b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\71c5d636cdd111426c3cf2e6b04cf95b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b071695958c8eaf649d98d2b18e6e8ec\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b071695958c8eaf649d98d2b18e6e8ec\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2d79b011e05dedca7886ca66235f5e5a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2d79b011e05dedca7886ca66235f5e5a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\d699b15997e473b8a6fa63e57e2e8a90\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\d699b15997e473b8a6fa63e57e2e8a90\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f5567286e8667f54e252a98f8f4fc009\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\anas\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\f5567286e8667f54e252a98f8f4fc009\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:13:13-123
+	android:resource
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:13:75-120
+	android:name
+		ADDED from C:\Users\anas\inventory\platforms\android\app\src\main\AndroidManifest.xml:13:24-74

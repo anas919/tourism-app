@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+      <ion-button *ngIf="!userIsAuthenticated">
+        <a mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a>
+      </ion-button>
+      <ion-button *ngIf="!userIsAuthenticated">
+        <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Signup</a>
+      </ion-button>
+      <ion-button mat-button *ngIf="userIsAuthenticated" (click)="onLogout()">
+        Logout
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><a routerLink="/">Tourist Guide</a></ion-title>
+  </ion-toolbar>
+</ion-header>

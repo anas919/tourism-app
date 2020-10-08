@@ -1,0 +1,61 @@
+<app-header></app-header>
+<ion-content>
+	<div class="ion-padding-horizontal">
+		<ion-chip class="ion-color ion-color-primary ios ion-activatable hydrated ion-activated">
+			<ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+				<span style="font-weight: 700">{{main}} : </span>{{description}}
+			</ion-label>
+		</ion-chip>
+		<ion-chip class="ion-color ion-color-danger ios ion-activatable hydrated ion-activated">
+			<ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+				<span style="font-weight: 700">Temperature : </span>{{temperature}} °C
+			</ion-label>
+		</ion-chip>
+		<ion-chip class="ion-color ion-color-warning ios ion-activatable hydrated ion-activated">
+			<ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+				<span style="font-weight: 700">Sunrise : </span>{{sunrise * 1000 | date:'dd/MM HH:mm'}}
+			</ion-label>
+		</ion-chip>
+		<ion-chip class="ion-color ion-color-warning ios ion-activatable hydrated ion-activated">
+			<ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+				<span style="font-weight: 700">Sunset : </span>{{sunset * 1000 | date:'dd/MM HH:mm'}}
+			</ion-label>
+		</ion-chip>
+	</div>
+	<ion-searchbar type="text" showCancelButton="focus" (ionChange)="searchPlaces($event)"></ion-searchbar>
+    <div *ngIf="places.length == 0">
+        <div style="text-align:center;">
+            <img src="assets/img/respect-steps.svg" alt="" width="420" height="360">
+            <h2 class="display-4">
+                Aucun place trouvé
+            </h2>
+        </div>
+    </div>
+	<!-- fab placed to the bottom end -->
+  	<mat-spinner *ngIf="isLoading"></mat-spinner>
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+		<ion-fab-button (click)="openModal()">
+			<ion-icon name="add"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
+	<!-- List of Places -->
+	<ion-row>
+		<ion-col size="6" *ngFor="let place of places">
+			<ion-card>
+				<img [src]="place.imagePath" width="100%" height="200px">
+				<ion-item>
+					<ion-icon name="pin" slot="start"></ion-icon>
+					<ion-label>Lat: {{place.latitude}} - Lng: {{place.longitude}}</ion-label>
+					<ion-button [routerLink]="['places/edit/', place.id]" fill="outline" slot="end">View</ion-button>
+				</ion-item>
+				<ion-card-header>
+				    <ion-card-subtitle>{{ place.start_date | date:'short' }}</ion-card-subtitle>
+				    <ion-card-title>{{ place.country }}, {{ place.city }}</ion-card-title>
+				</ion-card-header>
+				<ion-card-content>
+					{{ place.title }}
+				</ion-card-content>
+			</ion-card>
+		</ion-col>
+	</ion-row>
+</ion-content>

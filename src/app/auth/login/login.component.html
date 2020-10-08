@@ -1,0 +1,38 @@
+<app-header></app-header>
+  <ion-content class="ion-padding">
+  <div class="auth-content">
+      <mat-card>
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+        <form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading" class="list-form">
+            <mat-form-field>
+              <input placeholder="E-mail" matInput type="email" name="email" ngModel #emailInput="ngModel" required email>
+              <mat-error *ngIf="emailInput.invalid">Please enter a E-mail</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input type="password" matInput placeholder="Password" name="password" ngModel #passwordInput="ngModel" required>
+              <mat-error *ngIf="passwordInput.invalid">Please enter a valid password</mat-error>
+            </mat-form-field>
+            <ion-button icon-left size="medium" expand="full" shape="round" color="danger" type="submit" *ngIf="!isLoading"  tappable>
+              <ion-icon name="log-in"></ion-icon>
+              &nbsp;Sign In
+            </ion-button>
+          </form>
+          <p *ngIf="!isLoading" class="ion-text-right" tappable class="paz">
+            <ion-text color="primary">
+              <strong>Forgot Password?</strong>
+            </ion-text>
+          </p>
+      </mat-card>
+    <!-- Other links -->
+    <div *ngIf="!isLoading" class="ion-margin-top ion-text-center">
+      <span class="paz" tappable>
+        <ion-text color="primary">
+          New here? <strong>Sign Up</strong>
+        </ion-text>
+      </span>
+    </div>
+
+
+
+  </div>
+</ion-content>

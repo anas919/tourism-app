@@ -1,0 +1,44 @@
+<app-header></app-header>
+<ion-content>
+  <div class="auth-content">
+    <div class="ion-padding">
+      <mat-card>
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+        <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading">
+            <mat-form-field>
+              <input placeholder="Full Name" matInput type="text" name="name" ngModel #nameInput="ngModel" required>
+              <mat-error *ngIf="nameInput.invalid">Please enter a valid Name</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input placeholder="Your City" matInput type="text" name="city" ngModel #cityInput="ngModel" required>
+              <mat-error *ngIf="cityInput.invalid">Please enter your city</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input placeholder="Your Phone" matInput type="text" name="tel" ngModel #telInput="ngModel" required>
+              <mat-error *ngIf="telInput.invalid">Please enter yout Phone Number</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input placeholder="E-mail" matInput type="email" name="email" ngModel #emailInput="ngModel" required email>
+              <mat-error *ngIf="emailInput.invalid">Please enter a E-mail</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input type="password" matInput placeholder="Password" name="password" ngModel #passwordInput="ngModel" required>
+              <mat-error *ngIf="passwordInput.invalid">Please enter a valid password</mat-error>
+            </mat-form-field>
+            <ion-button icon-left size="medium" expand="full" shape="round" color="danger" tappable type="submit" *ngIf="!isLoading">
+              <ion-icon name="log-in"></ion-icon>
+              Sign Up
+            </ion-button>
+        </form>
+      </mat-card>
+    </div>
+    <!-- Other links -->
+    <div *ngIf="!isLoading" class="ion-margin-top ion-text-center">
+      <span tappable>
+        <ion-text color="primary">
+          <strong>I have an account!</strong>
+        </ion-text>
+      </span>
+    </div>
+  </div>
+</ion-content>

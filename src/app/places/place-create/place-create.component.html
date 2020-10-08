@@ -1,0 +1,74 @@
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+          Add Place
+      </ion-col>
+    </ion-row>
+    <form [formGroup]="form" (submit)="onSavePlace()" class="list-form">
+        <ion-row>
+            <mat-form-field>
+                <mat-label>Country place</mat-label>
+                <mat-select formControlName="country" (selectionChange)="changeCountry($event)">
+                    <mat-option *ngFor="let country of countries" [value]="country">
+                    {{country}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </ion-row>
+        <ion-row>
+            <mat-form-field>
+                <mat-label>City place</mat-label>
+                <mat-select formControlName="city">
+                    <mat-option *ngFor="let city of cities" [value]="city">
+                    {{city}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </ion-row>
+        <ion-row>
+            <mat-form-field>
+                <input placeholder="Place title" matInput type="text" formControlName="title">
+                <mat-error *ngIf="form.get('title').invalid">Enter a title for your place</mat-error>
+            </mat-form-field>
+        </ion-row>
+        <ion-row>
+            <mat-form-field>
+                <input placeholder="Place latitude" matInput type="text" formControlName="latitude">
+                <mat-error *ngIf="form.get('latitude').invalid">Enter the latitude place</mat-error>
+            </mat-form-field>
+        </ion-row>
+        <ion-row>
+            <mat-form-field>
+                <input placeholder="Place longitude" matInput type="text" formControlName="longitude">
+                <mat-error *ngIf="form.get('longitude').invalid">Enter the longitude place</mat-error>
+            </mat-form-field>
+        </ion-row>
+        <ion-row>
+            <ion-label>Start Date</ion-label>
+            <ion-datetime formControlName="start_date" displayFormat="YYYY-MM-DD h:mm:ss a" min="2019" max="2022"></ion-datetime>
+        </ion-row>
+        <ion-row>
+            <button mat-strocked-button type="button" (click)="filePicker.click()">Pick Image</button>
+            <input style="display: none;" type="file" #filePicker (change)="onImagePicked($event)">
+        </ion-row>
+        <ion-row>
+            <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
+                <img [src]="imagePreview" [alt]="form.value.title">
+            </div><br>
+        </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" expand="full" size="small" color="primary">&nbsp;Add</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full" size="small" color="light" (click)="closeModal()">Cancel</ion-button>
+        </ion-col>
+      </ion-row>
+      <!--<ion-item>
+        <ion-label>Start Date</ion-label>
+        <ion-datetime displayFormat="D MMM YYYY H:mm" min="2019-10-29" max="2019-10-29" value="2019-10-29T00:13Z"></ion-datetime>
+      </ion-item>-->
+    </form>
+  </ion-grid>
+ </ion-content>
