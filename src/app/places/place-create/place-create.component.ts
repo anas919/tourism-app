@@ -9,6 +9,8 @@ import { mimeType } from './mime-type.validator';
 // import { SubjectModel } from '../../subjects/subject.model';
 // import { SubjectsService } from '../../subjects/subjects.service';
 import { AuthService } from 'src/app/auth/auth.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-place-create',
   templateUrl: './place-create.component.html',
@@ -40,14 +42,15 @@ export class PlaceCreateComponent implements OnInit, OnDestroy {
     private modalController: ModalController,
     private navParams: NavParams,
     public route: ActivatedRoute,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
     this.modelId = this.navParams.data.paramID;
     this.modalTitle = this.navParams.data.paramTitle;
     this.ownerId = this.authService.getUserId();
-    console.log(this.ownerId);
+    // console.log(this.ownerId);
     this.authStatusSub = this.authService.getAuthStatusListener()
       .subscribe(authStatus => {
         this.isLoading = false;
@@ -92,33 +95,18 @@ export class PlaceCreateComponent implements OnInit, OnDestroy {
       return;
     }
     this.isLoading = true;
-    // this.ownerId = '5f6636a35d961c10f175962a';
-    console.log(this.mode);
-    if (this.mode === 'create') {
-      this.placesService.addPlace(
-        this.form.value.title,
-        this.form.value.city,
-        this.form.value.country,
-        this.form.value.start_date,
-        this.form.value.latitude,
-        this.form.value.longitude,
-        this.ownerId,
-        this.form.value.image
-      );
-    } else {
-      this.placesService.updatePlace(
-        this.placeId,
-        this.form.value.title,
-        this.form.value.city,
-        this.form.value.country,
-        this.form.value.start_date,
-        this.form.value.latitude,
-        this.form.value.longitude,
-        this.ownerId,
-        this.form.value.image
-      );
-    }
-    this.form.reset();
+    this.placesService.addPlace(
+      this.form.value.title,
+      this.form.value.city,
+      this.form.value.country,
+      this.form.value.start_date,
+      this.form.value.latitude,
+      this.form.value.longitude,
+      this.ownerId,
+      this.form.value.image
+    );
+    this.closeModal();
+    // this.router.navigate(['/']);
   }
 
   async closeModal() {

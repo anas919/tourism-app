@@ -48,6 +48,7 @@ export class PlacesService {
   searchPlaces(placesPerPage: number, currentPage: number, searchCriteria: string) {
     console.log(searchCriteria);
     const queryParams = `?pagesize=${placesPerPage}&page=${currentPage}&criteria=${searchCriteria}`;
+    console.log(queryParams);
     this.http
       .get<{message: string, places: any, maxPlaces: number }>(
         'http://localhost:3000/api/places/search' + queryParams

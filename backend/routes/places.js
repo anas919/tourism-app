@@ -126,10 +126,12 @@ router.get('/search',(req, res, next) => {
 
   const pageSize = +req.query.pagesize;
   const currentPage = +req.query.page;
-  const searchCriteria = +req.query.criteria;
+  var searchCriteria = req.query.criteria;
+  // console.log(pageSize);
+  // searchCriteria = "AZ";
   console.log(searchCriteria);
-  const placeQuery = Place.find({"title": searchCriteria});
-  console.log(placeQuery);
+  const placeQuery = Place.find({"title": {'$regex': searchCriteria}});
+  // console.log(placeQuery);
   let fetchedPlaces;
   if (pageSize && currentPage) {
     placeQuery

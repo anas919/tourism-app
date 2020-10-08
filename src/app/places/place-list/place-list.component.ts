@@ -7,6 +7,7 @@ import { PageEvent } from '@angular/material';
 import { AuthService } from 'src/app/auth/auth.service';
 import { ModalController } from '@ionic/angular';
 import { PlaceCreateComponent } from '../place-create/place-create.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-place-list',
@@ -31,13 +32,16 @@ export class PlaceListComponent implements OnInit, OnDestroy {
   private temperature: number;
   private sunrise: string;
   private sunset: string;
+  //search Input
+  private searchCriteria: string;
 
   dataReturned:any;
 
   constructor(
     public modalController: ModalController,
     public placesService: PlacesService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -78,7 +82,8 @@ export class PlaceListComponent implements OnInit, OnDestroy {
       });
    
       modal.onDidDismiss().then((dataReturned) => {
-
+        this.placesService.getPlaces(this.placesPerPage, this.currentPage);
+        this.ngOnInit();
       });
    
       return await modal.present();
@@ -94,11 +99,11 @@ export class PlaceListComponent implements OnInit, OnDestroy {
   searchPlaces(ev: any) {
     this.isLoading = true;
     // set val to the value of the searchbar
-    const val = ev.target.value;
+    this.searchCriteria = ev.target.value;
 
-    this.placesService.searchPlaces(this.placesPerPage, this.currentPage, val);
+    this.placesService.searchPlaces(this.placesPerPage, this.currentPage, this.searchCriteria);
     // if the value is an empty string don't filter the items
-    if (val && val.trim() !== '') {
+    if (this.searchCriteria && this.searchCriteria.trim() !== '') {
       this.placesSub = this.placesService.getPlaceUpdateListener()
       .subscribe((placeData: {places: Place[], placeCount: number}) => {
         this.isLoading = false;

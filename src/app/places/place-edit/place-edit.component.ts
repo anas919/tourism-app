@@ -38,6 +38,7 @@ export class PlaceEditComponent implements OnInit {
 
   	ngOnInit() {
   		
+    	this.ownerId = this.authService.getUserId();
 	    this.form = new FormGroup({
 	      title: new FormControl(null, {
 	        validators: [Validators.required, Validators.minLength(3)]
@@ -110,7 +111,6 @@ export class PlaceEditComponent implements OnInit {
 	      	return;
 	    }
 	    this.isLoading = true;
-	    this.ownerId = '5f6636a35d961c10f175962a';
 		this.placesService.updatePlace(
 			this.placeId,
 			this.form.value.title,
