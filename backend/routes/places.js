@@ -30,8 +30,6 @@ const storage = multer.diskStorage({
 
 router.post('', checkAuth, multer({storage: storage}).single('image'), (req, res, next) => {
   const url = req.protocol + '://' + req.get("host");
-  console.log('here is the title'+req.body.title);
-  console.log('here is the title');
   const place = new Place({
     city: req.body.city,
     start_date: req.body.start_date,
@@ -131,6 +129,7 @@ router.get('/search',(req, res, next) => {
   // searchCriteria = "AZ";
   console.log(searchCriteria);
   const placeQuery = Place.find({"title": {'$regex': searchCriteria}});
+  //Select * from places where title like %searchCriteria%;
   // console.log(placeQuery);
   let fetchedPlaces;
   if (pageSize && currentPage) {

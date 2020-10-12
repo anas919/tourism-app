@@ -8,7 +8,7 @@ const userRoutes = require('./routes/users');
 const placesRoutes = require('./routes/places');
 const placetagsRoutes = require('./routes/placetags');
 const tagsRoutes = require('./routes/tags');
-const newsRoutes = require('./routes/news');
+const weatherRoutes = require('./routes/weather');
 //api call new
 
 const app = express();
@@ -45,7 +45,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/places', placesRoutes);
 app.use('/api/placetags', placetagsRoutes);
 app.use('/api/tags', tagsRoutes);
-app.use('/api/news', newsRoutes);
+app.use('/api/weather', weatherRoutes);
 
 
 module.exports = app;

@@ -86,8 +86,7 @@ export class PlacesService {
   }
 
   getWeather() {
-    return this.http.get<{weather: any}>('http://localhost:3000/api/news');
-    // return this.http.get<{coord: string}>('https://api.openweathermap.org/data/2.5/weather?q=Taza&appid=0cc13a4cd053dabddd0e2c40e5e9e108');
+    return this.http.get<{weather: any}>('http://localhost:3000/api/weather');
   }
 
   addPlace(title: string, city: string, country: string, start_date: string, latitude: string, longitude: string, owner_id: string, image: File) {
